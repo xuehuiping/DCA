@@ -16,7 +16,7 @@ from utils.vocab import make_vocab, load_embedding
 def load_params():
     """Loads and reads the yaml config file.
     FIXME: more general params path"""
-    with open("/home/quentinb/DCA/training_params.yml", 'r') as stream:
+    with open("/home/xuehp/git/DCA/training_params.yml", 'r') as stream:
         try:
             params = yaml.safe_load(stream)
         except yaml.YAMLError as exc:
@@ -60,7 +60,7 @@ def get_embedders(vocab_size: int, embedding_dim: int,
     word2id, id2word = make_vocab(word_count, vocab_size, special_tokens)
 
     w2v_path = join(os.environ["XP_PATH"],
-                    "word2vec", f"word2vec.{embedding_dim}d.226k.bin")
+                    "", f"word2vec.{embedding_dim}d.198k.bin")
 
     embedding, _ = load_embedding(id2word, word2id, w2v_path)
 

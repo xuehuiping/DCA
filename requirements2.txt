@@ -1,0 +1,8 @@
+torch
+gensim
+pyrouge
+PyYAML
+pytorch-lightning
+test-tube
+cytoolz
+tqdm
